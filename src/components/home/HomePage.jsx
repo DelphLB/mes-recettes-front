@@ -39,7 +39,7 @@ const HomePage = () => {
             className='filter'
             type='text'
             onChange={(e) => setSearch(e.target.value)}
-            placeholder=' Rechercher par nom (Ginto, Wok...)'
+            placeholder=' Rechercher une recette'
           />
         </div>
         <div className='blocks-recettes'>
