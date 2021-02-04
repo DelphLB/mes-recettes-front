@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+}
+
+.navbar {
+  width: 90%;
+  height: 70px;
+  background-color: white;
+  /* border: solid 1px #f5cac3; */
+  margin: 0 5%;
+  position: fixed;
+}
+
+nav {
+  display: flex;
+}
+nav p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.linkPages {
+  text-decoration: none;
+  color: white;
+}
+
+.list {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+button {
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+}
+
+.items {
+  transition: transform ease-in-out 0.5s;
+}
+
+.items:hover {
+  transform: scale(1.2);
+  transition-duration: 300ms;
+}
+
+.items.active {
+  border: rgb(197 197 197 / 41%);
+  border-radius: 1px;
+  background: rgb(197 197 197 / 41%);
+}
+
+.items:focus {
+  outline: none;
+}
+
+.navBar .log-out {
+  margin-left: 1rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.hello-name {
+  display: inline;
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    position: fixed;
+    bottom: 0;
+  }
+  .hello-name {
+    display: none;
+  }
+
+  .linkPages {
+    font-size: 14px;
+  }
+}
