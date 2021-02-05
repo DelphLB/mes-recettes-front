@@ -16,9 +16,19 @@
   width: 40%;
 }
 
-.block-recette-solo img {
+.image-recette {
   width: 97%;
   margin-top: 2%;
+  max-height: 600px;
+  transition: all 0.28s ease-out;
+}
+
+.image-recette:hover {
+  width: 98%;
+  max-height: 608px;
+  margin-top: 0.8%;
+
+  transition: all 0.28s ease-in;
 }
 
 .filtrerecette {
@@ -26,16 +36,34 @@
   width: 90%;
   margin-bottom: 2%;
   height: 70px;
+  display: flex;
+  justify-content: center;
 }
 
 .filter {
   height: 40px;
-  width: 50%;
+  width: 30%;
   margin-top: 10px;
+  border: solid 2px #615c5761;
+  border-radius: 30px;
 }
 
 .section-recette {
   display: flex;
   flex-direction: column;
   place-items: center;
+}
+
+.title-home {
+  color: #73253c;
+}
+.subtitle-home {
+  color: #f28482;
+}
+.block-recette-solo h4 {
+  color: #84a59d;
+}
+
+.loupe {
+  margin-top: 10px;
 }
