@@ -6,11 +6,9 @@ import { IconContext } from "react-icons";
 import { BiSearchAlt } from "react-icons/bi";
 import { connect } from "react-redux";
 import { fetchRecipes } from "../../redux/actions/recipesAction";
+import SearchBar from "./SearchBar";
 
-const HomePage = ({ recettes, handleRecipes }) => {
-  const [filter, setFilter] = useState([]);
-  const [search, setSearch] = useState("");
-
+const HomePage = ({ recettes, handleRecipes, filter }) => {
   useEffect(() => {
     axios
       .get(`http://localhost:3000/api/recettes/`)
@@ -19,13 +17,7 @@ const HomePage = ({ recettes, handleRecipes }) => {
 
   console.log(recettes);
 
-  useEffect(() => {
-    setFilter(
-      recettes.recettes.filter((recette) =>
-        recette.title.toLowerCase().includes(search.toLowerCase())
-      )
-    );
-  }, [search, recettes]);
+  console.log(filter);
 
   console.log(recettes);
 
@@ -38,19 +30,10 @@ const HomePage = ({ recettes, handleRecipes }) => {
         Choisis ta recette et file en cuisine !
       </h2>
       <div className='section-recette'>
-        <div className='filtrerecette'>
-          <IconContext.Provider value={{ color: "#73253c", size: "40px" }}>
-            <BiSearchAlt className='loupe' />
-          </IconContext.Provider>
-          <input
-            className='filter'
-            type='text'
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder=' Rechercher une recette'
-          />
-        </div>
+        <SearchBar />
+
         <div className='blocks-recettes'>
-          {filter.map((recette) => (
+          {filter.filter.map((recette) => (
             <div className='block-recette-solo'>
               <img
                 className='image-recette'
@@ -94,6 +77,7 @@ const HomePage = ({ recettes, handleRecipes }) => {
 
 const mapStateToProps = (state) => ({
   recettes: state.recettes,
+  filter: state.filter,
 });
 
 const mapDispatchToProps = (dispatch) => ({
