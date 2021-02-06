@@ -3,7 +3,7 @@ import "./home-page.css";
 import axios from "axios";
 import { GiCookingPot } from "react-icons/gi";
 import { IconContext } from "react-icons";
-import { BiSearchAlt } from "react-icons/bi";
+
 import { connect } from "react-redux";
 import { fetchRecipes } from "../../redux/actions/recipesAction";
 import SearchBar from "./SearchBar";
