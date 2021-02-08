@@ -9,25 +9,28 @@ body {
   /* border: solid 1px #f5cac3; */
   margin: 0 5%;
   position: fixed;
+  z-index: 1;
 }
 
 nav {
   display: flex;
 }
 nav p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-size: 20px;
   text-decoration: none;
 }
 
 .linkPages {
   text-decoration: none;
-  color: white;
 }
 
 .list {
+  margin-top: 1%;
   height: 100%;
   display: flex;
+
+  width: 20%;
+
   justify-content: space-around;
   align-items: center;
 }
@@ -37,20 +40,36 @@ button {
   background-color: transparent;
   border: none;
 }
+.bonne-recette {
+  font-weight: 600;
+  font-size: 30px;
+  color: #73253c;
+  width: max-content;
+  margin-top: 10px;
+}
+.items .linkPages {
+  color: #f28482;
+}
 
-.items {
+.tems {
+  transform: scale(1);
   transition: transform ease-in-out 0.5s;
 }
 
 .items:hover {
-  transform: scale(1.2);
-  transition-duration: 300ms;
+  transform: scale(1.1);
+
+  /* transition-duration: 500ms; */
+  transition: transform ease-in-out 500ms;
 }
 
-.items.active {
-  border: rgb(197 197 197 / 41%);
-  border-radius: 1px;
-  background: rgb(197 197 197 / 41%);
+.items:hover .linkPages {
+  color: #73253c;
+}
+
+.items.active .linkPages {
+  color: #73253c;
+  transition: transform ease-in-out 1s;
 }
 
 .items:focus {
@@ -65,6 +84,15 @@ button {
 
 .hello-name {
   display: inline;
+}
+
+.title-site {
+  size: 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 500px) {

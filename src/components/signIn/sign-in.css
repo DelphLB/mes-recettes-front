@@ -1,0 +1,115 @@
+.sign-in,
+.sign-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.sign-in form,
+.sign-up form {
+  width: 100%;
+
+  max-width: 500px;
+  padding: 0 1rem;
+  text-align: end;
+  margin-right: 10%;
+}
+
+.sign-in .form-group,
+.sign-up .form-group {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 2.5rem;
+}
+
+.sign-in .form-group > input,
+.sign-up .form-group > input {
+  height: 50px;
+  border: none;
+  border-bottom: 2px solid #f6bd60;
+  outline: #f6bd60;
+  margin-bottom: 0;
+}
+
+.sign-in .form-group > input.input-default,
+.sign-up .form-group > input.input-default {
+  background: rgb(243, 241, 241);
+}
+
+.sign-in .form-group > input.input-error,
+.sign-up .form-group > input.input-error {
+  background: rgba(231, 85, 85, 0.2);
+}
+
+.sign-in .form-group > .feedback-error,
+.sign-up .form-group > .feedback-error {
+  color: rgb(231, 85, 85);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.sign-in form > button,
+.sign-up form > button {
+  background-color: #f6bd60;
+  padding: 0.75rem 1.75rem;
+  cursor: pointer;
+  outline: none;
+  width: auto;
+  display: flex;
+  margin-top: 20px;
+}
+
+.sign-in form > .alert,
+.sign-up form > .alert {
+  padding: 1rem;
+  border: 2px solid rgb(105, 155, 117);
+  border-radius: 5px;
+  margin-bottom: 2.5rem;
+  color: rgb(38, 73, 46);
+}
+
+.sign-in form > .alert.alert-danger,
+.sign-up form > .alert.alert-danger {
+  background: rgb(233, 190, 190);
+  border-color: rgb(155, 105, 105);
+  color: rgb(73, 38, 38);
+}
+
+.sign-in form > .alert.alert-success,
+.sign-up form > .alert.alert-success {
+  background: rgb(190, 233, 200);
+  border-color: rgb(105, 155, 117);
+  color: rgb(38, 73, 46);
+}
+
+.container-content-image .sign-in {
+  background-image: linear-gradient(rgba(43, 17, 3, 0.358), rgba(0, 0, 0, 0.8)),
+    url("https://images.unsplash.com/photo-1462618521524-07d259ab774a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  margin: 0;
+}
+
+.container-content-image .sign-up {
+  background-image: linear-gradient(
+      rgba(240, 225, 200, 0.5),
+      rgba(238, 224, 202, 0.5)
+    ),
+    url("https://cdn.pixabay.com/photo/2019/04/02/04/32/masala-4096891_960_720.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  margin: 0;
+}
+
+.sign-in form label,
+.sign-up form label {
+  color: rgb(47, 11, 33);
+}
