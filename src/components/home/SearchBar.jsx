@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { IconContext } from "react-icons";
 import { BiSearchAlt } from "react-icons/bi";
 import { handleFilter } from "../../redux/actions/filterActions";
+import "./home-page.css";
 
 const SearchBar = ({ recettes, handleFilter, handleOptions }) => {
   const [search, setSearch] = useState("");
@@ -56,47 +57,51 @@ const SearchBar = ({ recettes, handleFilter, handleOptions }) => {
 
   return (
     <div className='filtrerecette'>
-      Veggie ?
-      <input
-        type='checkbox'
-        value='1'
-        id='veggie'
-        name='check'
-        onChange={handleOptionVeggie}
-      />
-      Sans Lactose ?{" "}
-      <input
-        type='checkbox'
-        value='1'
-        id='lactose'
-        name='check'
-        onChange={handleOptionLactose}
-      />
-      Salé ?{" "}
-      <input
-        type='checkbox'
-        value='1'
-        id='lactose'
-        name='check'
-        onChange={handleOptionSavory}
-      />
-      Sucré ?{" "}
-      <input
-        type='checkbox'
-        value='1'
-        id='lactose'
-        name='check'
-        onChange={handleOptionSweet}
-      />
-      <IconContext.Provider value={{ color: "#73253c", size: "40px" }}>
-        <BiSearchAlt className='loupe' />
-      </IconContext.Provider>
-      <input
-        // className='filter'
-        type='text'
-        onChange={(e) => setSearch(e.target.value)}
-        placeholder=' Rechercher une recette'
-      />
+      <div className='options'>
+        <p>Veggie</p>
+        <input
+          type='checkbox'
+          value='1'
+          id='veggie'
+          name='check'
+          onChange={handleOptionVeggie}
+        />
+        <p>Sans Lactose</p>
+        <input
+          type='checkbox'
+          value='1'
+          id='lactose'
+          name='check'
+          onChange={handleOptionLactose}
+        />
+        <p>Salé</p>
+        <input
+          type='checkbox'
+          value='1'
+          id='lactose'
+          name='check'
+          onChange={handleOptionSavory}
+        />
+        <p>Sucré</p>
+        <input
+          type='checkbox'
+          value='1'
+          id='lactose'
+          name='check'
+          onChange={handleOptionSweet}
+        />
+      </div>
+      <div className='search-loupe'>
+        <IconContext.Provider value={{ color: "#73253c", size: "40px" }}>
+          <BiSearchAlt className='loupe' />
+        </IconContext.Provider>
+        <input
+          className='filter-bar'
+          type='text'
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder=' Rechercher une recette'
+        />
+      </div>
     </div>
   );
 };

@@ -1,0 +1,48 @@
+.page-ajout {
+  background-image: linear-gradient(
+      rgba(240, 225, 200, 0.5),
+      rgba(238, 224, 202, 0.5)
+    ),
+    url("https://cdn.pixabay.com/photo/2019/04/02/04/32/masala-4096891_960_720.jpg");
+  background-size: cover;
+  padding-bottom: 5%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+}
+.post-recette {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  /* margin-left: 25%; */
+  align-self: center;
+  margin: 5%;
+
+  place-content: space-around;
+  background: #ffffff57;
+}
+
+.input-simple {
+  margin: 1%;
+}
+.level {
+  margin: 1%;
+}
+.input-large {
+  height: 100px;
+  margin: 1%;
+}
+.input-large-instruction {
+  height: 160px;
+  margin: 1%;
+}
+.envoyer {
+  margin-top: 2%;
+  background-color: #f6bd60;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+  height: 80px;
+  width: 200px;
+  color: #73253c;
+  align-self: center;
+}

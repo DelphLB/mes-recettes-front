@@ -1,6 +1,11 @@
 .home-page {
-  background-color: #f7ede2;
-  min-height: 200vh;
+  background-image: linear-gradient(
+      rgba(236, 224, 203, 0.815),
+      rgba(238, 224, 202, 0.767)
+    ),
+    url("https://cdn.pixabay.com/photo/2021/01/01/21/56/cooking-5880136_960_720.jpg");
+  background-size: cover;
+  padding-bottom: 10%;
   padding-top: 70px;
   display: flex;
   flex-direction: column;
@@ -9,17 +14,21 @@
 .blocks-recettes {
   display: flex;
   place-content: space-around;
+  flex-flow: wrap;
+  width: 90%;
+  margin: 5%;
 }
 
 .block-recette-solo {
   background-color: white;
   width: 40%;
+  margin-bottom: 5%;
 }
 
 .image-recette {
   width: 97%;
   margin-top: 2%;
-  max-height: 600px;
+  height: 500px;
   transition: all 0.28s ease-out;
 }
 
@@ -37,7 +46,28 @@
   margin-bottom: 2%;
   height: 70px;
   display: flex;
-  justify-content: center;
+
+  place-content: space-around;
+}
+.filter-bar {
+  width: 80%;
+  margin-left: 5%;
+  border-radius: 20px;
+  height: 40px;
+  margin-top: 2%;
+  border: solid 0.5px #73253c;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1%;
+  width: 50%;
+}
+
+.search-loupe {
+  width: 30%;
+  display: flex;
 }
 
 .filter {
@@ -54,11 +84,9 @@
   place-items: center;
 }
 
-.title-home {
-  color: #73253c;
-}
 .subtitle-home {
   color: #f28482;
+  font-size: 30px;
 }
 .block-recette-solo h4 {
   color: #84a59d;

@@ -1,0 +1,39 @@
+.page-recette {
+  background-color: #f7ede2;
+  padding-bottom: 10%;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  background-position: center -125px;
+}
+.box-title-recette {
+  height: 300px;
+  align-self: center;
+  width: 90%;
+  background: #0e0e0e17;
+  padding-top: 2%;
+}
+
+.description-long {
+  width: 60%;
+  align-self: center;
+  margin: 2%;
+}
+
+.description-details {
+  border-right: solid 4px #73253c;
+  border-bottom: solid 4px #73253c;
+  padding: 1%;
+  margin: 2%;
+  background: white;
+}
+.description-page-recette {
+  background-color: #f7ede2;
+
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+
+  z-index: 1;
+  margin-left: 5%;
+}
